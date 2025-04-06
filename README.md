@@ -2,7 +2,7 @@
 
 This is a multi-layered Django web application project built to demonstrate how to integrate a basic API within a Django app. The project includes both frontend rendering (via Django templates) and API endpoints for backend interaction.
 
-> ⚠️ **Note:** This project is intended to run locally and is not deployed.  
+> ⚠️ **Note:** This project is intended to run locally(localhost) and is not deployed.  
 Anyone who wishes to explore or build upon this can clone the repo and use it on their own machine.
 
 ---
