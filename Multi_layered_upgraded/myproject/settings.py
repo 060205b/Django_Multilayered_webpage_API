@@ -4,7 +4,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'your-secret-key'
 DEBUG = True
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['*']  # allow all hosts for local dev (not safe for prod)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -14,9 +15,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',  # your app
+    'corsheaders',  # for cross-origin API access
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # CORS must be first
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -30,7 +33,7 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],  # Optional: use if you move templates here
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -52,4 +55,5 @@ DATABASES = {
     }
 }
 
-STATIC_URL = '/static/'
+# CORS settings for API access
+CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins (for local dev)
