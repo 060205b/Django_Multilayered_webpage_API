@@ -1,10 +1,12 @@
 **🔩 Django Multi-Layered Web App with API**
+
 This is a multi-layered Django web application project built to demonstrate how to integrate a basic API within a Django app. The project includes both frontend rendering (via Django templates) and API endpoints for backend interaction.
 
 **⚠️ Note:** This project is intended to run locally (localhost) and is not deployed.
 Anyone who wishes to explore or build upon this can clone the repo and use it on their own machine.
 
 **🚀 Features**
+
 - Multi-layered Django structure (URLs, Views, Models, Templates)
 - API to submit and retrieve data (e.g., poll votes)
 - Pre-configured SQLite database
@@ -72,6 +74,7 @@ Content-Type: application/json
 Get all submissions stored in the database as a JSON response.
 
 **🗃️ Database Info**
+
 The database used is SQLite (local, file-based).
 It stores records from the API — for example:
 - Voting results from `/submit_vote/`
@@ -97,6 +100,7 @@ Multi_layered_upgraded/
 ```
 
 **🔄 Project Flow (Simplified)**
+
 1. 🧑‍💻 User submits a vote or data via frontend or Postman
 2. 🔁 API endpoint (`/submit_vote/`) receives and parses the request
 3. 🧠 Django backend (`views.py`) processes the data
@@ -108,20 +112,24 @@ Multi_layered_upgraded/
 > Even though data is returned as JSON, it's actually saved in `db.sqlite3`.
 
 **🔧 Tech Stack**
+
 - Python 3.x
 - Django 4.x
 - SQLite (default DB)
 - Django REST-like functionality (without DRF)
 
 **💡 Future Ideas / Contributions**
+
 - Add user login & authentication
 - Replace raw API with Django REST Framework
 - Add a frontend (React, Vue, or even plain JS) to hit API
 - Deploy to Heroku or Railway
 
 **🙌 Author**
+
 Made with 💻 by [@060205b](https://github.com/060205b)
 
 **📄 License**
+
 MIT License — free to use, modify, or extend.
 
