@@ -1,4 +1,4 @@
-**🔩 Django Multi-Layered Web App with API**
+🔩 Django Multi-Layered Web App with API
 
 This is a multi-layered Django web application project built to demonstrate how to integrate a basic API within a Django app. The project includes both frontend rendering (via Django templates) and API endpoints for backend interaction.
 
